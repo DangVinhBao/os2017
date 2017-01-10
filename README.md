@@ -10,5 +10,5 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
+* Name: Dang Vinh Bao
+* ID: USTHBI6-017
