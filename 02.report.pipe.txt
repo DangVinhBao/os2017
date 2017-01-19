@@ -1,0 +1,18 @@
+
+~$ ls -a | grep "list"
+list
+list 2
+
+~$ wc -l /etc/passwd
+40 /etc/passwd
+
+~$ free --human | head -n 2
+             total       used       free     shared    buffers     cached
+Mem:          2,0G       1,1G       869M       5,8M        74M       611M
+
+~$ cat /proc/cpuinfo | grep "siblings"
+siblings	: 1
+
+~$ find /home/vinhbao/Pictures -type f -name "*.jpg" | wc -l
+1
+
