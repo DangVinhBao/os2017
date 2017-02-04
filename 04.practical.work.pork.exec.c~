@@ -1,0 +1,42 @@
+#include<unistd.h>
+#include<stdio.h>
+
+int main (){
+	
+	printf("Main before fork()\n");
+	int pid; 
+
+	for(int i = 0; i<2; i++){
+
+		
+		if(i == 0){
+			
+			pid = fork();
+			if(pid == 0){
+				
+				printf("The child process %d:\n", i);
+				char *args[] = {"/bin/ps", "-ef", NULL};
+				execvp("/bin/ps", args);
+				return;
+
+			}
+		
+		}else{
+
+			pid = fork();
+			if(pid == 0){
+
+				printf("The child process %d:\n", i);
+				char *args[] = {"/proc/meminfo", "-h", NULL};
+				execvp("/proc/meminfo", args);
+			}
+
+		}
+
+
+	}
+	
+
+	return 0;
+
+}
