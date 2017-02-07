@@ -49,12 +49,16 @@ int main(){
 	printf("Item 2:\nType: %c\nAmount: %d\nUnit: %c\n", item2.type, item2.amount, item2.unit);
 
 	//produce
+	printf("Initial value:	First: %d	Last: %d\n", first, last);
 	produce(&item1);
+	printf("Produce item1:\nFirst value: %d\nLast value: %d\n", first, last);
 	produce(&item2);
+	printf("Produce item2:\nFirst value: %d\nLast value: %d\n", first, last);
 
 	//consume
 	item* consumedItem = consume();
 	printf("Consumed item:\nType: %c\nAmount: %d\nUnit: %c\n", consumedItem->type, consumedItem->amount, consumedItem->unit);
+	printf("Consume:\nFirst value: %d\nLast value: %d\n", first, last);
 
 	return 0;
 
