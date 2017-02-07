@@ -1,0 +1,17 @@
+
+// First way
+
+~$ ps -e | grep "firefox"
+ 2044 ?        00:00:04 firefox
+
+~$ ps -o nlwp 2044
+NLWP
+  40
+
+//Second way
+
+~$ cd /proc/2044/task
+
+/proc/2044/task$ ls | wc -l
+42
+
